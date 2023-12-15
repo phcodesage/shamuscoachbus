@@ -1,0 +1,290 @@
+/*--------------------------------------------------------
+
+	Main Stylesheet
+
+	Name: Novanoid
+	Description: Minimal Single Page Template
+	URL: http://rommar.in.ua/novanoid
+	Author: Roman Marusenko
+	E-mail: maredwinz@gmail.com
+
+	------------------------------------------------------
+
+	[Table of contents]
+		01. GLOBAL
+		02. BUTTON
+		03. OVERLAY
+		04. CAROUSEL
+		05. HEADER
+		06. NAVBAR
+		07. FEATURES
+		08. WORKS
+		09. SERVICES
+		10. PARALLAX
+		11. TEAM
+		12. PRICES
+		13. BLOG
+		14. CONTACTS
+		15. FOOTER
+
+--------------------------------------------------------*/
+
+/*------------------------
+	01. GLOBAL
+------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+body { background-color: #434a54; margin: 50px 0; }
+h1 { font: 700 28px 'Yanone Kaffeesatz', sans-serif; color: #434a54; text-align: center; text-transform: uppercase;}
+h2 { font: 700 20px 'Yanone Kaffeesatz', sans-serif; text-transform: uppercase; color: #434a54; padding: 0; margin: 0; }
+h3 { font: 700 18px 'Yanone Kaffeesatz', sans-serif; text-transform: uppercase; color: #656d78; padding: 0; margin: 0; }
+h4 { font: 700 22px 'Yanone Kaffeesatz', sans-serif; text-transform: uppercase; color: #656d78; padding: 0; margin: 0; text-align: center; }
+h5 { font: 400 24px Roboto, sans-serif; text-align: center; color: #5d9cec; padding: 0; margin: 0; }
+p { font: 13px/20px Roboto, sans-serif; color: #656d78; padding: 0; margin: 0; }
+a { font: 13px/20px Roboto, sans-serif; color: #5d9cec; padding: 0; margin: 0; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+a:hover,
+a:active,
+a:focus { color: #434a54; outline: none; text-decoration: none; }
+.indents { padding: 0 70px; }
+.white { background: #fff; }
+.grey { background: #f3f4f8; }
+.title { margin-bottom: 50px; }
+.title h2 { font: 700 28px 'Yanone Kaffeesatz', sans-serif; color: #434a54; text-align: center; text-transform: uppercase;}
+.title span { display: block; width: 40px; height: 2px; margin: 10px auto 10px auto; background: #ccd0d9; }
+.title p { font: 14px Roboto, sans-serif; color: #656d78; text-align: center; }
+::selection { background: #5d9cec; color: #fff; }
+::-moz-selection { background: #5d9cec; color: #fff; }
+hr { border-top: 1px dashed #dde0e4; height: 1px; }
+.scrolltop { display: none; width: 30px; height: 30px; font-size: 10px; line-height: 2.8em; color: #fff; text-align: center; background: #5d9cec; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; position: fixed; bottom: 20px; right: 20px; }
+.scrolltop:hover { background: #343a43; color: #fff; }
+.scrolltop:focus { color: #fff; }
+#preloader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; z-index: 9999; }
+#status { width: 200px; height: 200px; position: absolute; left: 50%; top: 50%; background-image: url(../img/loader.gif); background-repeat: no-repeat; background-position: center; margin: -100px 0 0 -100px; }
+
+/*------------------------
+	02. BUTTON
+------------------------*/
+.button { display: block; width: 160px; height: 40px; margin: auto; background: #5d9cec; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; font: 700 16px/2.4em 'Yanone Kaffeesatz', sans-serif; color: #fff; text-transform: uppercase; text-align: center; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+.button i { font-size: 15px; padding-right: 5px; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+.button span { display: inline-block; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+.button:hover,
+.button:active,
+.button:focus { background: #434a54; color: #fff; text-decoration: none; outline: none; }
+.button:hover i { visibility: hidden; opacity: 0; -webkit-transform: translateX(10px); -moz-transform: translateX(10px); -o-transform: translateX(10px); transform: translateX(10px); }
+.button:hover span { -webkit-transform: translateX(-10px); -moz-transform: translateX(-10px); -o-transform: translateX(-10px); transform: translateX(-10px); }
+
+/*------------------------
+	03. OVERLAY
+------------------------*/
+.image { display: block; width: 100%; height: 190px; overflow: hidden; position: relative; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+.image img { display: block; height: 100%; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+.image .overlay { width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; background: rgba(93, 156, 236, .95); -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+.image .overlay h3 { font: 700 18px 'Yanone Kaffeesatz', sans-serif; color: #fff; text-transform: uppercase; margin-top: 20px; margin-left: 20px; opacity: 0; -webkit-transition: opacity .3s ease .15s; -moz-transition: opacity .3s ease .15s; -o-transition: opacity .3s ease .15s; transition: opacity .3s ease .15s; }
+.image .overlay h3 span { display: block; width: 20px; height: 1px; background: #fff; margin-left: 3px; margin-top: 3px; }
+.image:hover .overlay,
+.image:hover .overlay h3 { opacity: 1; }
+
+/*------------------------
+	04. CAROUSEL
+------------------------*/
+.owl-theme .owl-controls { text-align: center; margin-top: 190px; }
+.owl-theme .owl-controls .owl-page { display: inline-block; }
+.owl-theme .owl-controls .owl-page span { display: block; background: transparent; width: 8px; height: 8px; margin: 5px 3px; border: 1px solid #fff; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span { background: #fff; }
+.owl-fade-out { z-index: 10; -webkit-animation: fadeOut .7s both ease; -moz-animation: fadeOut .7s both ease; animation: fadeOut .7s both ease; }
+.owl-fade-in { -webkit-animation: fadeIn .7s both ease; -moz-animation: fadeIn .7s both ease; animation: fadeIn .7s both ease; }
+@-webkit-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-webkit-keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+/*------------------------
+	05. HEADER
+------------------------*/
+header { display: block; width: 100%; height: 600px; -webkit-border-top-right-radius: 3px; -moz-border-top-right-radius: 3px; -o-border-top-right-radius: 3px; border-top-right-radius: 3px; -webkit-border-top-left-radius: 3px; -moz-border-top-left-radius: 3px; -o-border-top-left-radius: 3px; border-top-left-radius: 3px; overflow: hidden; }
+header .head { width: 100%; height: 600px; background-size: cover; background-repeat: no-repeat; background-position: center; }
+header .header-1 { background-image: url(../img/header-1.jpg); }
+header .header-2 { background-image: url(../img/header-2.jpg); }
+header .header-3 { background-image: url(../img/header-3.jpg); }
+header .header-4 { background-image: url(../img/header-4.jpg); }
+header .header-5 { background-image: url(../img/header-5.jpg); }
+.caption { display: block; margin: 20% 0 -20% 0;}
+.caption h1 { font: 400 48px 'Yanone Kaffeesatz', sans-serif; color: #fff; text-transform: uppercase; text-align: center; margin: 0; padding: 0; }
+.caption p { font: 13px Roboto, sans-serif; color: #fff; text-align: center; }
+
+/*------------------------
+	06. NAVBAR
+------------------------*/
+.navbar { width: 100%; max-width: 1140px; min-height: 70px; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; margin: 0; z-index: 999; -webkit-transition: background .3s ease 0s; -moz-transition: background .3s ease 0s; -o-transition: background .3s ease 0s; transition: background .3s ease 0s; }
+.navbar-brand { margin: 9px 0; }
+.navbar li a { font: 400 16px 'Yanone Kaffeesatz', sans-serif; text-transform: uppercase; line-height: 20px; color: #fff; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; padding-top: 24px; padding-bottom: 24px; }
+.navbar li a:hover,
+.navbar li a:active,
+.navbar li a:focus { background: transparent; opacity: .6; outline: none; }
+.normal li a.current { background: transparent; opacity: .6; outline: none; }
+.navbar-toggle { margin-top: 14px; }
+.navbar-toggle i { font-size: 21px; color: #fff; }
+.navbar-brand { display: block; width: 80px; height: 25px; background: url(../img/logo-light.png) no-repeat center; margin-top: 20px; }
+.navbar.offset { display: block; background: rgba(255, 255, 255, .97); -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .04); -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .04); box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .04); }
+.navbar.offset li a { color: #656d78; }
+.navbar.offset li a:hover,
+.navbar.offset li a:active,
+.navbar.offset li a:focus { background: transparent; color: #5d9cec; opacity: 1; outline: none; }
+.navbar.offset li a.current { background: transparent; color: #5d9cec; opacity: 1; outline: none; }
+.offset .navbar-brand { background: url(../img/logo-dark.png) no-repeat center; }
+
+/*------------------------
+	07. FEATURES
+------------------------*/
+#features .indents { padding-top: 100px; padding-bottom: 50px; }
+#features .item { margin-bottom: 45px; }
+#features .item i { font-size: 22px; color: #5d9cec; float: left; padding: 3px 20px 0 0; }
+#features .item .text { overflow: hidden; }
+#features .item .text h2 { padding-bottom: 10px; }
+
+/*------------------------
+	08. WORKS
+------------------------*/
+#works .indents { padding-top: 43px; padding-bottom: 20px; }
+#works .grid { list-style-type: none; margin: 0; padding: 0; margin-left: -26px; }
+#works .grid li { display: inline-block; width: 225px; margin-left: 26px; margin-bottom: 30px; }
+#works .grid li.item { -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+#works .grid li.big { width: 490px; }
+#works ul.filters { list-style-type: none; padding: 0; text-align: center; margin-bottom: 30px; }
+#works ul.filters li { display: inline-block; text-align: center; font: 700 16px 'Yanone Kaffeesatz', sans-serif; color: #656d78; text-transform: uppercase; background: transparent; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; padding: 3px 12px; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+#works ul.filters li:hover { color: #5d9cec; cursor: pointer; }
+#works ul.filters li.active { background: #5d9cec; color: #fff; cursor: pointer; }
+
+/*------------------------
+	09. SERVICES
+------------------------*/
+#services .indents { padding-top: 93px; padding-bottom: 50px; }
+#services .item { margin-bottom: 50px; }
+#services .item i { display: block; font-size: 22px; color: #5d9cec; text-align: center; }
+#services .item h2 { text-align: center; padding: 4px 0 11px; }
+#services .item span { display: block; width: 25px; height: 1px; background: #ccd0d9; margin: auto; }
+#services .item p { text-align: center; padding-top: 10px; }
+
+/*------------------------
+	10. PARALLAX
+------------------------*/
+#parallax { background: url(../img/parallax.jpg) no-repeat fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+#parallax .indents { padding-top: 100px; padding-bottom: 100px; }
+#parallax h2 { font: 400 38px 'Yanone Kaffeesatz', sans-serif; color: #fff; text-align: center; }
+#parallax h2 i { padding: 0 5px; font-size: 34px; color: #ed5564; }
+#parallax p { font: 14px Roboto, sans-serif; color: #fff; text-align: center; padding: 11px 0 50px; }
+#parallax .button { background: transparent; border: 2px solid rgba(255, 255, 255, .5); }
+#parallax .button:hover { border-color: rgba(255, 255, 255, 1); background: rgba(255, 255, 255, .2); }
+
+/*------------------------
+	11. TEAM
+------------------------*/
+#team .indents { padding-top: 93px; padding-bottom: 65px; }
+#team .member { margin-bottom: 50px; }
+#team .member .image { height: auto; }
+#team .member .image img { width: 100%; height: auto; }
+#team .member .image .overlay ul { list-style-type: none; margin: 0; padding: 0; text-align: center; margin: 28.5% auto -28.5% auto; }
+#team .member .image .overlay li { display: inline-block; }
+#team .member .image .overlay li a { display: block; background: transparent; width: 24px; height: 24px; text-align: center; line-height: 1.7em; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px;  font-size: 14px; color: #fff; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+#team .member .image .overlay li a:hover,
+#team .member .image .overlay li a:active { background: #fff; color: #5d9cec; outline: none; }
+#team .member h3 { padding-top: 16px; }
+#team .member p { color: #aab2bd; font-size: 12px; }
+#team hr { padding-bottom: 25px; }
+
+/* Counters */
+.counters ul { display: block; margin: 0; padding: 0; text-align: center; margin-bottom: 30px; }
+.counters li { list-style-type: none; display: inline-block; padding-right: 10px; }
+.counters li i { font-size: 32px; color: #5d9cec; float: left; padding-top: 4px; }
+.counters li p { font: 700 24px/1em Roboto, sans-serif; color: #656d78; text-align: left; }
+.counters li h3 { color: #aab2bd; }
+
+/*------------------------
+	12. PRICES
+------------------------*/
+#prices .indents { padding-top: 43px; padding-bottom: 50px; }
+#prices .item { display: block; width: 100%; height: auto; margin-bottom: 50px; background: #fff; border: 1px solid #e6e9ee; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+#prices .item h4 { display: block; width: 100%; background: #f9f9fb; border-bottom: 1px dashed #e6e9ee; padding: 24px 0; }
+#prices .item h5 { padding: 24px 0 15px; }
+#prices .item ul { text-align: center; list-style: none; margin: 0; padding: 0; }
+#prices .item li { font: 400 14px Roboto, sans-serif; color: #aab2bd; text-align: center; padding: 5px 0; }
+#prices .item .button { width: 85px; height: 30px; line-height: 0px; margin-top: 24px; margin-bottom: 30px; }
+#prices .item .button i { display: block; visibility: visible; opacity: 0; }
+#prices .item .button:hover span { -webkit-transform: translateY(5px); -moz-transform: translateY(5px); -o-transform: translateY(5px); transform: translateY(5px); opacity: 0; visibility: hidden; }
+#prices .item .button:hover i { -webkit-transform: translateY(8px); -moz-transform: translateY(8px); -o-transform: translateY(8px); transform: translateY(8px); opacity: 1; visibility: visible; }
+
+/*------------------------
+	13. BLOG
+------------------------*/
+#blog .indents { padding-top: 93px; padding-bottom: 100px; }
+article { margin-bottom: 70px; }
+article a { font: 700 14px Roboto, sans-serif; color: #434a54; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+article a:hover,
+article a:active,
+article a:focus { color: #5d9cec; text-decoration: none; outline: none; }
+article p.time { font-size: 12px; color: #aab2bd; padding-bottom: 12px; }
+article .button { width: 85px; height: 30px; margin: 18px 0 0; background: transparent; border: 1px solid #5d9cec; font: 700 16px/1.9em 'Yanone Kaffeesatz', sans-serif; color: #5d9cec; }
+article .button:hover,
+article .button:focus { background: #5d9cec; color: #fff; }
+#blog-page article { margin-bottom: 0; padding: 50px 0; }
+#blog-page .grey { border-top: 1px dashed #dde0e4; border-bottom: 1px dashed #dde0e4; background: #f9f9fb; }
+ul.pages { list-style-type: none; margin: 45px 0; padding: 0; text-align: center; }
+.pages li { display: inline-block; }
+.pages li a { font: 13px/20px Roboto, sans-serif; color: #656d78; padding: 0 4px; }
+.pages li a:hover,
+.pages li a.current { color: #5d9cec; }
+
+/*------------------------
+	14. CONTACTS
+------------------------*/
+#contacts .indents { padding-top: 93px; padding-bottom: 100px; }
+#contacts h3 { text-align: center; text-transform: uppercase; padding-bottom: 10px; }
+#contacts p { text-align: center; }
+#contacts form { margin-top: 48px; }
+#contacts form input { display: block; width: 100%; height: 35px; padding: 0 15px; margin-bottom: 20px; border: 1px solid #e6e9ee; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+#contacts form textarea { display: block; width: 100%; max-width: 100%; min-height: 200px; padding: 15px; margin-bottom: 20px; border: 1px solid #e6e9ee; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+#contacts form input:hover,
+#contacts form textarea:hover { border-color: #ccd0d9; }
+#contacts form input:focus,
+#contacts form textarea:focus { border-color: #5d9cec; }
+#contacts form button { border: none; }
+#contacts #contacts-errors { text-align: center; margin-top: 20px; }
+
+/*------------------------
+	15. FOOTER
+------------------------*/
+footer { background: #343a43; -webkit-border-bottom-right-radius: 3px; -moz-border-bottom-right-radius: 3px; -o-border-bottom-right-radius: 3px; border-bottom-right-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-bottom-left-radius: 3px; -o-border-bottom-left-radius: 3px; border-bottom-left-radius: 3px; }
+footer .indents { padding-top: 40px; padding-bottom: 35px; }
+footer a.logo { display: block; margin-top: 30px; }
+footer ul { list-style-type: none; margin: 0; padding: 30px 0; text-align: center; }
+footer li { display: inline-block; text-align: center; }
+footer li a { display: block; background: transparent; width: 28px; height: 28px; text-align: center; line-height: 1.9em; -webkit-border-radius: 3px; -moz-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px;  font-size: 14px; color: #fff; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+footer li a.fb:hover { background: #3b5998; color: #fff; }
+footer li a.tw:hover { background: #55acee; color: #fff; }
+footer li a.dr:hover { background: #ea4c89; color: #fff; }
+footer li a.li:hover { background: #0976b4; color: #fff; }
+footer li a.gp:hover { background: #dd4b39; color: #fff; }
+footer li a.ig:hover { background: #3f729b; color: #fff; }
+footer li a.tm:hover { background: #35465c; color: #fff; }
+footer p { display: block; color: #fff; text-align: right; margin-top: 30px; }

@@ -1,0 +1,84 @@
+/*--------------------------------------------------------
+
+	Responsive Stylesheet
+	
+	Name: Novanoid
+	Description: Minimal Single Page Template
+	URL: http://rommar.in.ua/novanoid
+	Author: Roman Marusenko
+	E-mail: maredwinz@gmail.com
+
+	------------------------------------------------------
+
+	[Table of contents]
+		01. 1200 and more pixels screen
+		02. 992 and more pixels screen
+		03. 768 and more pixels screen
+		04. 670 and more pixels screen
+		05. 460 and more pixels screen
+
+	------------------------------------------------------
+
+	WARNING: All media queries arranged in order of decay.
+	If you want to add your media query, add it so as not
+	to upset the order.
+
+	To add you media query use the syntax:
+	@media (max-width: Npx) {
+		Your code here
+	}
+	Where N is number of pixels of screen.
+	
+--------------------------------------------------------*/
+
+/*------------------------
+	01. 1200PX
+------------------------*/
+@media (max-width: 1200px) {
+	.is-sticky .navbar,
+	.is-sticky .navbar.offset { max-width: 940px; }
+	#works .grid li.big { width: 225px; }
+	#works .grid { margin-left: 0; }
+}
+
+/*------------------------
+	0. 992PX
+------------------------*/
+@media (max-width: 992px) {
+	.indents { padding: 0 50px; }
+	.is-sticky .navbar,
+	.is-sticky .navbar.offset { max-width: 720px; }
+	#works .grid li.big { width: 225px; }
+	#works .grid { margin-left: 45px; margin-right: 45px; }
+	
+}
+
+@media (min-width: 992px) {
+	#contacts .contact-info { padding: 0 140px;}
+}
+
+@media (min-width: 767px) {
+	.contact-info .col-md-4 {
+        /* Your styles for 767px and up go here */
+        float: left;
+        width: 33.33333333%;
+    }
+}
+/*------------------------
+	03. 670PX
+------------------------*/
+@media (max-width: 670px) {
+	#works .grid li,
+	#works .grid li.big { width: 100%; }
+	#works .grid { margin-left: 10px; margin-right: 72px; }
+}
+
+/*------------------------
+	04. 460PX
+------------------------*/
+@media (max-width: 460px) {
+	.indents { padding: 0 15px; }
+	.caption { margin: 66% 0 -66% 0; }
+	#works ul.filters li { display: block; width: 60%; margin: auto; }
+	/*.is-sticky .navbar.offset { max-width: 93.5%; }*/
+}
